@@ -74,7 +74,7 @@ table Metrics
 		formatString: 0%;-0%;0%
 		lineageTag: 35e8b29b-671d-405b-836f-be5f976d0490
 
-	measure 'GDP Per Capita (USD)' = CALCULATE(AVERAGE(Indicators[GDP per capita (current US$)]),ALL('Year'[Year]))
+	measure 'GDP Per Capita (USD)' = CALCULATE(ROUNDDOWN(AVERAGE(Indicators[GDP per capita (current US$)]),0),ALL('Year'[Year]))
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: 54a23105-5644-46ec-9060-0c2c68f7483f
 
